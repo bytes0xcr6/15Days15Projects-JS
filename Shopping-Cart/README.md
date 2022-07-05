@@ -1,4 +1,4 @@
-# Shopping-Cart
+# Shopping-Cart (Local Storage)
 Shopping Cart using JavaScript, HTML and CSS
 
 <a href="https://shopping-cart-universidad.netlify.app/"> Website Universidad! </a>
