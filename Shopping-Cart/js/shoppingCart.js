@@ -4,13 +4,22 @@ const listaCarrito = document.querySelector("#lista-carrito tbody");
 const listaCursos = document.querySelector("#lista-cursos");
 let articulosCarrito = [];
 
-
 cargarEventListener();
 
 function cargarEventListener() {
   listaCursos.addEventListener("click", agregarCurso);
-  vaciarCarrito.addEventListener("click", borrarCarrito);
   carrito.addEventListener("click", borrarCurso);
+
+  document.addEventListener("DOMContentLoaded", () => {
+    articulosCarrito = JSON.parse(localStorage.getItem("carrito")) || [];
+    carritoHTML();
+  });
+
+  vaciarCarrito.addEventListener("click", () => {
+    articulosCarrito = [];
+
+    limpiarCarrito();
+  });
 }
 
 function agregarCurso(e) {
@@ -63,10 +72,17 @@ function carritoHTML() {
       <td>
            <a href="#" class="borrar-curso" data-id="${curso.id}">X</a>
       </td>
- `;
+    `;
 
     listaCarrito.appendChild(row);
   });
+
+  // Agrear carrito a local Storage
+  sincronizarStorage();
+}
+
+function sincronizarStorage() {
+  localStorage.setItem("carrito", JSON.stringify(articulosCarrito));
 }
 
 function limpiarCarrito() {
