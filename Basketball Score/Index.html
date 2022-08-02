@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Karla:wght@500;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Basketball Scoreboard</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="score-box">
+        <h3 class="team">HOME</h3>
+        <p class="score" id="home-score">0</p>
+        <div class="butns-middle">
+          <button class="butn-points" id="butn1" onclick="addOneH()">+1</button>
+          <button class="butn-points" id="butn2" onclick="addTwoH()">+2</button>
+          <button class="butn-points" id="butn3" onclick="addThreeH()">
+            +3
+          </button>
+        </div>
+      </div>
+      <div class="score-box">
+        <h3 class="team">GUEST</h3>
+        <p class="score middle-adjust" id="guest-score">0</p>
+        <div class="butns-middle">
+          <button class="butn-points" id="butn1" onclick="addOneG()">+1</button>
+          <button class="butn-points" id="butn2" onclick="addTwoG()">+2</button>
+          <button class="butn-points" id="butn3" onclick="addThreeG()">
+            +3
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>

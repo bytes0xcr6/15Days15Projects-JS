@@ -1,0 +1,46 @@
+* {
+  font-family: "karla";
+}
+
+body {
+  margin: 0;
+  background-image: url("imgs/basket.jpg");
+  background-size: 100%;
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 22%;
+}
+
+.score-box {
+  padding: 50px 50px;
+  background-color: white;
+  border-radius: 11px;
+}
+
+.team {
+  text-align: center;
+  margin-top: -10px;
+}
+
+.score {
+  margin-left: 50%;
+  transform: translate(-50%);
+  margin-top: 0;
+  margin-bottom: 60px;
+  font-size: 80px;
+  color: orangered;
+}
+
+.butn-points {
+  background: black;
+  color: white;
+}
+
+.butns-middle {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
