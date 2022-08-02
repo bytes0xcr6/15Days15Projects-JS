@@ -1,4 +1,4 @@
-<h1>Appointment organizer for Pet center (using Classes)</h1>
+<h1>Appointment organizer for Pet center (LOCAL STORAGE)</h1>
 
 <a href="https://appointments-administrator.netlify.app/" target="_blank"> Organize your appointments for your Pet Center! </a>
 
