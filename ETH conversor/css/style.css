@@ -1,0 +1,125 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  font-family: var(--inter);
+  background-color: var(--bg-body);
+}
+
+:root {
+  --inter: "Inter", sans-serif;
+  --bg-body: hsl(0, 0%, 11%);
+  --bg-card: hsl(215, 28%, 17%);
+  --clr-title: hsl(0, 0%, 100%);
+  --clr-copy: hsl(0, 0%, 82%);
+
+  --gradient: linear-gradient(45deg, hsl(32, 90%, 52%), hsl(340, 82%, 61%));
+}
+.main {
+  position: relative;
+  place-self: center;
+}
+
+.float,
+.button {
+  position: absolute;
+  width: fit-content;
+  left: 50%;
+  font-size: 1.5rem;
+  transform: translateX(-50%);
+}
+.float {
+  top: -10.5rem;
+}
+.button {
+  bottom: -3.5rem;
+}
+.btn {
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  letter-spacing: 1px;
+}
+.card {
+  width: 34.375rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border-radius: 0.8rem;
+  overflow: hidden;
+}
+.card__header {
+  width: 100%;
+  padding: 3rem 0 1.5rem;
+  background-image: var(--gradient);
+}
+.card__body {
+  width: 100%;
+  padding: 2rem 0 1.5rem;
+  display: grid;
+  gap: 1.3rem;
+  background-color: var(--bg-card);
+}
+.title,
+.input-num,
+.subtitle,
+.float,
+.btn {
+  color: var(--clr-title);
+}
+.title {
+  font-size: 1.375rem;
+  font-weight: 800;
+}
+.input-num {
+  font-size: 1rem;
+  font-weight: 800;
+  text-align: center;
+  align-items: center;
+  background-color: transparent;
+  outline: none;
+  border: none;
+}
+.subtitle,
+.copy {
+  font-size: 14px;
+}
+.subtitle {
+  font-weight: 600;
+}
+.copy {
+  font-weight: 400;
+  color: var(--clr-copy);
+}
+
+.attr {
+  font-size: 0.8rem;
+  text-align: center;
+  color: var(--clr-copy);
+}
+.attr__lnk {
+  color: hsl(32, 90%, 52%);
+  text-decoration: none;
+}
+
+@media screen and (max-width: 832px), (orientaton: landscape) {
+  .attr {
+    margin-top: 5rem;
+  }
+}
+
+.input-num::-webkit-inner-spin-button,
+.input-num::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
