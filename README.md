@@ -1,1 +1,2 @@
-# Here you will find most of the JavaScript projects that I have created.
+# Here you will find...
+<p>most of the JavaScript projects that I have created using just vanilla JavaScript.</p>
